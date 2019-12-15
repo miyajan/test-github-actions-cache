@@ -18,6 +18,7 @@
   "homepage": "https://github.com/miyajan/test-github-actions-cache#readme",
   "devDependencies": {
     "mocha": "^6.2.2",
-    "power-assert": "^1.6.1"
+    "power-assert": "^1.6.1",
+    "prettier": "^1.19.1"
   }
 }
