@@ -11,11 +11,13 @@ jobs:
         with:
           node-version: 12.x
       - uses: actions/cache@v1.0.3
+        id: cache-npm
         with:
           path: ~/.npm
           key: node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             node-
+      - run: echo "Cache hit ${{ steps.cache-npm.outputs.cache-hit }}"
       - name: npm ci
         run: npm ci
       - name: Test
