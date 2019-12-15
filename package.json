@@ -4,25 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
     "test": "mocha --require intelli-espower-loader"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miyajan/test-github-actions-cache.git"
   },
-  "author": "Jumpei Miyata <miyajan777@gmail.com> (http://www.kaizenprogrammer.com/)",
+  "author": "Jumpei Miyata <miyajan777@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/miyajan/test-github-actions-cache/issues"
   },
   "homepage": "https://github.com/miyajan/test-github-actions-cache#readme",
   "devDependencies": {
-    "@cybozu/eslint-config": "^8.1.0",
-    "eslint": "^6.7.2",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^6.2.2",
-    "power-assert": "^1.6.1",
-    "prettier": "^1.19.1"
+    "power-assert": "^1.6.1"
   }
 }
