@@ -1,5 +1,7 @@
 name: Main workflow
 on: [push]
+env:
+  cache-version: v1
 jobs:
   run:
     name: Run
@@ -14,9 +16,9 @@ jobs:
         id: cache-npm
         with:
           path: ~/.npm
-          key: node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ env.cache-version }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            node-
+            ${{ env.cache-version }}-node-
       - run: echo "Cache hit ${{ steps.cache-npm.outputs.cache-hit }}"
       - name: npm ci
         run: npm ci
